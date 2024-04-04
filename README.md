@@ -1,35 +1,17 @@
 # ST-Link v2.1 REV Type-C
 
-Программатор ST-Link V2-1 это внутрисхемный отладчик и программатор для микроконтроллеров серий STM32.
-Программатор имеет SWD SWO RESET UART ( логический уровень 3.3 Вольта но с 5 Вольтовой логикой тоже работает 
-имеет конвертор уровней ) интерфейсы для работы с любым STM32 микроконтроллером, установленным на программируемой плате
+Programmer ST-Link V2-1 is an on-chip debugger and programmer for STM32 series microcontrollers. The programmer has SWD, SWO, RESET and UART (logic level 3.3 Volt but with 5 Volt logic also works) interfaces to work with any STM32 microcontroller installed on the programming board. Support automatic firmware upgrade to ensure ST's future support.
 
-Поддержка автоматического обновления встроенного программного обеспечения, чтобы обеспечить последующая поддержку компании ST
+## Installation process
 
-Gerber_ST-Link v2.1 REV Type-C.zip - Gerber файл платы
+ 1) Install the STM32 ST-LINK Utility **v4.3.0** program from soft directory. **Exactly** this version _(it will not work with later ones)_.
 
-Protected-2-1-Bootloader.bin - прошивка
+ 2) Upload `Protected-2-1-Bootloader.bin` via SWD or DFU (whichever is more convenient) into the programmer we created.
 
-Процесс установки:
+ 3) Connect the just-flashed programmer via USB and select **UPDATE** in the _ST-LINK Utility v4.3.0_ program.
 
-	1) Устанавливаем из текущего архива программу STM32 ST-LINK Utility v4.3.0 именно эту версию ( с более поздними работать не будет ).
-	
-	2) Заливаем Protected-2-1-Bootloader.bin через SWD или DFU ( кому как удобнее ) на наш созданный программатор.
+ 4) Select _STM32+VCP+MSD_ option and click update.
 
-	3) Подключаем только что прошитый наш программатор через UCB и в программе ST-LINK Utility v4.3.0 выбираем -ОБНОВЛЕНИЕ.
-	
-	4) нам предложит несколько вариантов : нам нужен STM32 + VCP + MSD выбираем его и жмем обновить.
+ 5) Next, download the latest version of the STM32CubeProgrammer program and update our device to the latest firmware.
 
-	5) Далее качаем последнюю версию программы STM32CubeProgrammer и в ней обновляем наш девайс до последней прошивки.
-	
-	6) для работы версии 2-1 и VCP устанавливаем драйвера которые идут в данном архиве.
-	
-## ФОТО ГОТОВОГО ИЗДЕЛИЯ:
-![](https://github.com/GolinskiyKonstantin/ST-Link-V2-1/blob/master/image/ST_Link_V2-1_Type-C_1.jpg)
-![](https://github.com/GolinskiyKonstantin/ST-Link-V2-1/blob/master/image/ST_Link_V2-1_Type-C_2.jpg)
-![](https://github.com/GolinskiyKonstantin/ST-Link-V2-1/blob/master/image/ST-LINK_V2.1_Type-C_1.png)
-![](https://github.com/GolinskiyKonstantin/ST-Link-V2-1/blob/master/image/ST-LINK_V2.1_Type-C_2.png)
-
-
-По всем вопросам пишите: golinskiy.konstantin@gmail.com
-
+ 6) Install drivers for VCP.
