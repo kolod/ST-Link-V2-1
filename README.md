@@ -17,3 +17,7 @@ Programmer ST-Link V2-1 is an on-chip debugger and programmer for STM32 series m
  5) Next, download the latest version of the STM32CubeProgrammer program and update our device to the latest firmware.
 
  6) Install drivers for VCP.
+
+## Used soft
+
+ 1) [DipTrace v4.3](https://www.diptrace.com/download/download-diptrace/)
